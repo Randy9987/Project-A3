@@ -1,1 +1,43 @@
 body { background-color: azure;}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: bisque;
+}
+
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-icon svg { 
+     width: 30px;
+     height: 30px; 
+     color:black ;
+     transition: color 0.2s; 
+     display: inline-block;
+    } 
+
+.hamburger{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 30px;
+    color: black;
+    display: inline-block;
+
+}
