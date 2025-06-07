@@ -41,3 +41,58 @@ body { background-color: azure;}
     display: inline-block;
 
 }
+
+.hero-banner {
+    background-image: url(young-woman-fabric-samples-curtains-table-fabric-types-ss-FEATURED.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    min-height: 500px;
+}
+
+.hero-content {
+    background-color: rgba(red, green, blue, alpha);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color:white;
+    margin-bottom: 1rem;
+}
+.shop-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+  }
+  
+  .shop-button:hover {
+    background-color: #444;
+  }
+
+  .quote {
+    background-color: gold;
+    padding: 64px 16px;
+    display: flex ;
+    justify-content: center;
+  }
+  
+  .quote-card {
+    background-color: hotpink;
+    color: antiquewhite;
+    padding: 32px 48px;
+    border-radius: 12px;
+
+  }
