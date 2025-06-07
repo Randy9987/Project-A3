@@ -96,3 +96,35 @@ body { background-color: azure;}
     border-radius: 12px;
 
   }
+
+  .corner-left-btn {
+    
+    text-decoration: none;    /*removes underline from link */
+    color: black; /* colour of the text itself */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background-color: aquamarine;
+    border: 1px;
+    border-radius: 12px;    /* rounded corners */
+    font-size: 16px;
+    cursor: pointer;
+
+  }
+
+.corner-right-btn {
+    color: black;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: bisque;
+    border: 1px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
