@@ -1,10 +1,31 @@
 console.log("JS file connected");
 
-const closeBtn = document.getElementById("close-sidebar");
 const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("sidebar-overlay");
+const openBtn = document.getElementById("open-sidebar");
+const closeBtn = document.getElementById("close-sidebar");
 
-closeBtn.addEventListener("click", () => {
-  sidebar.style.transform = "translateX(-100%)";
+// Open sidebar
+openBtn.addEventListener("click", () => {
+  sidebar.classList.add("active");
+  overlay.classList.add("active");
+});
+
+// Close sidebar
+const closeSidebar = () => {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+};
+
+closeBtn.addEventListener("click", closeSidebar);
+overlay.addEventListener("click", closeSidebar);
+
+// Toggle dropdowns
+document.querySelectorAll(".dropdown-toggle").forEach((button) => {
+  button.addEventListener("click", () => {
+    const dropdown = button.closest(".dropdown");
+    dropdown.classList.toggle("open");
+  });
 });
 
 const track = document.querySelector(".carousel-track");

@@ -14,7 +14,7 @@
         <!--sidebar wrapper-->
         <div class="left">
           <!--hamburger button to open the sidebar menu-->
-          <button class="hamburger" aria-label="Sidebar-Menu">
+          <button class="hamburger" id="open-sidebar" aria-label="Sidebar-Menu">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -31,7 +31,8 @@
             </svg>
           </button>
           <!--overlay that appears behind the sidebar-->
-          <!--sidebar panel-->
+          <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  
           <div id="sidebar" class="sidebar">
             <div class="sidebar-header">
               <h2>The Fabric Store</h2>
@@ -47,18 +48,58 @@
               <input type="text" placeholder="Search" />
             </div>
 
-            <!--Sidebar menu-->
             <nav class="sidebar-menu">
-              <a href="#"> Home</a>
-              <a href="#"> New Arrivals</a>
-              <a href="#"> Sale</a>
-              <a href="#"> Shop All</a>
-              <a href="#"> Pattern + Supplies</a>
-              <a href="#"> Our Stores</a>
-              <a href="#"> About Us</a>
-              <a href="#"> Blog</a>
+              <a href="#">Home</a>
+               
+              <div class="dropdown">
+                <button class="dropdown-toggle">
+                  New Arrivals
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>                  
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">New Fabrics</a>
+                  <a href="#">Trending</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropdown-toggle">
+                  Shop All Fabric
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>                  
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Cotton</a>
+                  <a href="#">Linen</a>
+                  <a href="#">Natural Fabric</a>
+                  <a href="#">Silk</a>
+                  <a href="#">Organic Fabric</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropdown-toggle">
+                  Pattern + Supplies
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>                  
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Patterns</a>
+                  <a href="#">Tools</a>
+                </div>
+              </div>
+
+              <a href="#">Sale</a>
+              <a href="#">Our Stores</a>
+              <a href="#">About Us</a>
+              <a href="#">Blog</a>
             </nav>
 
+          <!--user actons-->
             <div class="Sidebar-actions">
               <a href="#" class="user-action">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
