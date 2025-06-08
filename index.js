@@ -15,16 +15,26 @@ btnRight.addEventListener("click", () => {
 const heartButtons = document.querySelectorAll(".heart-btn");
 heartButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    btn.classList.toggle("active");
+    const isActive = btn.classList.toggle("active");
 
-    const popup = document.createElement("div");
-    popup.className = "wishlist-popup";
-    popup.textContent = "Item successfully added to wishlist";
+    let popup = document.querySelector(".wishlist-popup");
 
-    document.body.appendChild(popup);
+    if (!popup) {
+      popup = document.createElement("div");
+      popup.className = "wishlist-popup";
+      document.body.appendChild(popup);
+    }
 
-    setTimeout(() => {
+    popup.textContent = isActive
+      ? "Item successfully added to Wishlist"
+      : "Item successfully removed from Wishlist";
+
+    if (popup._timeout) {
+      clearTimeout(pop._timeout);
+    }
+
+    popup._timeout = setTimeout(() => {
       popup.remove();
-    }, 5000);
+    }, 2000);
   });
 });
