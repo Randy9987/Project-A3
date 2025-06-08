@@ -236,3 +236,151 @@ body { background-color: azure;}
  .gallery-arrow.right {
     right:10px;
  }
+
+ .new-arrivals-section {
+    background: white;
+    padding: 60px 40px;
+    text-align: center;
+    font-family: sans-serif;
+ }
+
+ .section-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+ }
+
+ .section-subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #444;
+ }
+/* product new arrivals, card container section */
+ .product-card {
+    width: 280px;
+    background-color: rgb(104, 143, 36);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .product-image-container {  /* image container with badge and icons */
+    position: relative;
+    padding: 20px;
+    background-color:rgb(40, 134, 76);
+    height: 240px;
+ }
+
+ .product-image-container img {
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+ }
+.product-image-container img:hover {
+    transform: scale(1.05);
+    transform: transform 0.3s ease;
+
+}
+.badge-sale {
+    position: absolute;
+    top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 3px;
+    color: white;
+    
+}
+
+.badge-secondary {
+    position: absolute;
+    top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 3px;
+    color: white;
+    
+
+}
+
+
+.badge-sale {
+    left: 10px;
+    background-color: #ff0000;
+}
+
+.badge-secondary {
+    left: 120px;
+    background-color: #2c3e50;
+}
+
+
+/* Action buttons */
+
+.product-icons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+
+}
+
+
+ .icon-btn,
+ .heart-btn {
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px;
+ }
+
+.icon-btn svg,
+.heart-btn svg {
+    width: 22px;
+    height: 22px;
+    stroke: black;
+    fill: none;
+ }
+.heart-btn.active svg {
+    fill: red;
+    stroke: red;
+}
+
+.product-details {
+    text-align: left;
+    padding: 16px;
+
+}
+
+.prodcut-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.shop-offer-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 28px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
