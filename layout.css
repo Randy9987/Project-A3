@@ -45,6 +45,56 @@ body {
 
 }
 
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background-color: #fffdf9;
+    box-shadow: 2px 0 8px;
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar-search input{
+    width:100%;
+    padding: 8px;
+    margin: 16px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.sidebar-menu a{
+    display: block;
+    padding: 10px 0;
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+}
+
 .hero-banner {
     background-image: url(young-woman-fabric-samples-curtains-table-fabric-types-ss-FEATURED.jpg);
     background-size: cover;
