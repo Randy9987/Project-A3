@@ -1,5 +1,5 @@
 body { 
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -337,17 +337,24 @@ body {
 .carousel-container {
     position: relative;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     width: 100%;
     overflow: hidden;
     margin-top: 40px;
 }
 
+.product-card {
+    min-width: 280px;
+    flex-shrink: 0;
+}
+
 .carousel-track {
     display: flex;
     overflow-x: auto;
+    flex-wrap: nowrap;
     scroll-behavior: smooth;
-    gap: 20px;
+    gap: 100px;
     padding: 10px;
 }
 
@@ -359,22 +366,26 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: white;
+    background-color: white;
     border: none;
     border-radius: 50%;
     box-shadow: 0 0 8px;
     padding: 10px;
     z-index: 10;
     cursor:pointer;
+
 }
 
-.carousel-btn.left {
-    left: 0;
+.carousel-btn svg{
+    width: 24px;
+    height:24px ;
+    stroke: black;
 }
 
-.carousel-btn.right {
-    right: 0;
-}
+
+.carousel-btn.left { left: 0;}
+
+.carousel-btn.right {right: 0;}
 
 .arrow-icon {
     width: 24px;
