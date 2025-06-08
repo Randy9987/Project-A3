@@ -1,5 +1,20 @@
 console.log("JS file connected");
 
+//Search function
+
+const searchToggle = document.getElementById("search-toggle");
+const searchBox = document.getElementById("search-box");
+const searchClose = document.getElementById("search-close");
+
+searchToggle.addEventListener("click", (e) => {
+  e.preventDefault();
+  searchBox.classList.toggle("hidden");
+});
+
+searchClose.addEventListener("click", () => {
+  searchBox.classList.add("hidden");
+});
+
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("sidebar-overlay");
 const openBtn = document.getElementById("open-sidebar");

@@ -21,6 +21,58 @@ body {
     align-items: center;
     gap: 1.5rem;
 }
+/*search-box with transition */
+.search-box {
+    display: flex;
+    align-items:center;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-left: 12px;
+    gap: 8px;
+    width:0;
+    opacity:0;
+    overflow: hidden;
+    transition: width 0.3s ease, opacity 0.3 ease;
+    max-width: 250px;
+
+}
+
+.search-box.active {
+    width: 100%;
+    opacity: 1;
+}
+.search-box svg {
+    width: 20px;
+    height: 20px;
+    stroke: black;
+}
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    max-width: 300px;
+}
+
+
+
+/* clo.se button for search bar */
+
+.search-close {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search-close svg {
+    width: 16px;
+    height: 16px;
+    stroke:black;
+}
+
+
 
 .nav-icon svg { 
      width: 30px;
