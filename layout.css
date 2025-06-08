@@ -87,9 +87,9 @@ body {
 
   .quote {
     background-color: rgb(255, 186, 179);
-    padding: 64px 16px;
-    display: flex ;
-    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .quote-card {
@@ -97,9 +97,26 @@ body {
     color: rgb(244, 244, 244);
     padding: 32px 48px;
     border-radius: 12px;
-
+    margin: 0 auto;
+    max-width: 800px;
   }
 
+  .quote .headline {
+    font: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .quote .subtext, .quote .store-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .quote .store-locations {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
   .corner-left-btn {
     
     text-decoration: none;    /*removes underline from link */
@@ -340,7 +357,7 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     margin-top: 40px;
 }
 
@@ -355,7 +372,8 @@ body {
     flex-wrap: nowrap;
     scroll-behavior: smooth;
     gap: 100px;
-    padding: 10px;
+    padding: 0 20px;
+    scroll-padding: 0;
 }
 
 .carousel-track::-webkit-scrollbar {
@@ -392,6 +410,7 @@ body {
     height: 24px;
     stroke: black;
 }
+
 
 
 /* Action buttons */
