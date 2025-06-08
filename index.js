@@ -1,5 +1,12 @@
 console.log("JS file connected");
 
+const closeBtn = document.getElementById("close-sidebar");
+const sidebar = document.getElementById("sidebar");
+
+closeBtn.addEventListener("click", () => {
+  sidebar.style.transform = "translateX(-100%)";
+});
+
 const track = document.querySelector(".carousel-track");
 const btnLeft = document.querySelector(".carousel-btn.left");
 const btnRight = document.querySelector(".carousel-btn.right");
