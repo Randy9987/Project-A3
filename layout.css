@@ -1,4 +1,7 @@
-body { background-color: azure;}
+body { 
+    background-color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .nav-container {
     display: flex;
@@ -62,7 +65,7 @@ body { background-color: azure;}
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 70px;
     font-weight: bold;
     color:white;
     margin-bottom: 1rem;
@@ -83,15 +86,15 @@ body { background-color: azure;}
   }
 
   .quote {
-    background-color: gold;
+    background-color: rgb(255, 186, 179);
     padding: 64px 16px;
     display: flex ;
     justify-content: center;
   }
   
   .quote-card {
-    background-color: hotpink;
-    color: antiquewhite;
+    background-color: rgb(250, 54, 152);
+    color: rgb(244, 244, 244);
     padding: 32px 48px;
     border-radius: 12px;
 
@@ -100,12 +103,12 @@ body { background-color: azure;}
   .corner-left-btn {
     
     text-decoration: none;    /*removes underline from link */
-    color: black; /* colour of the text itself */
+    color: rgb(255, 255, 255); /* colour of the text itself */
     position: fixed;
     bottom: 20px;
     left: 20px;
     padding: 8px 16px;
-    background-color: aquamarine;
+    background-color: rgb(0, 0, 0);
     border: 1px;
     border-radius: 12px;    /* rounded corners */
     font-size: 16px;
@@ -114,13 +117,13 @@ body { background-color: azure;}
   }
 
 .corner-right-btn {
-    color: black;
+    color: rgb(255, 255, 255);
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 48px;
     height: 48px;
-    background-color: bisque;
+    background-color: rgb(0, 0, 0);
     border: 1px;
     border-radius: 50%;
     display: flex;
@@ -133,7 +136,7 @@ body { background-color: azure;}
     display: flex;
     gap: 20px;
     padding: 40px;
-    background-color: aquamarine;
+    background-color: rgb(247, 133, 133);
 }
 
 .left-column {
@@ -144,7 +147,7 @@ body { background-color: azure;}
 }
 .Info-Box {
     display: flex;
-    background-color: blueviolet;
+    background-color: rgb(249, 177, 154);
     border-radius: 16px;
     padding: 20px;
     box-shadow: none;
@@ -161,11 +164,12 @@ body { background-color: azure;}
 }
 
  .box-text { /* text next to the image */
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: normal;
  }
 
  .box-text h3 {
-    font-sixe: 20px;
+    font-size: 20px;
     margin-bottom: 8px;
     text-decoration: underline;
     font-weight: bold;
@@ -238,7 +242,7 @@ body { background-color: azure;}
  }
 
  .new-arrivals-section {
-    background: white;
+    background: rgb(245, 227, 227);
     padding: 60px 40px;
     text-align: center;
     font-family: sans-serif;
@@ -257,9 +261,17 @@ body { background-color: azure;}
     color: #444;
  }
 /* product new arrivals, card container section */
+
+
+ .product-grid {   /* side by side product placement */
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: flex-start;
+ }
  .product-card {
-    width: 280px;
-    background-color: rgb(104, 143, 36);
+    width: 310px;
+    background-color: rgb(248, 202, 202);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px;
@@ -270,8 +282,9 @@ body { background-color: azure;}
  .product-image-container {  /* image container with badge and icons */
     position: relative;
     padding: 20px;
-    background-color:rgb(40, 134, 76);
-    height: 240px;
+    background-color: #f7b3b3;
+    overflow: hidden;
+    height: 320px;
  }
 
  .product-image-container img {
@@ -283,7 +296,7 @@ body { background-color: azure;}
  }
 .product-image-container img:hover {
     transform: scale(1.05);
-    transform: transform 0.3s ease;
+    
 
 }
 .badge-sale {
@@ -305,7 +318,6 @@ body { background-color: azure;}
     padding: 4px 12px;
     border-radius: 3px;
     color: white;
-    
 
 }
 
@@ -316,8 +328,58 @@ body { background-color: azure;}
 }
 
 .badge-secondary {
-    left: 120px;
+    left: 70px;
     background-color: #2c3e50;
+}
+
+
+/*carousel-container, sliding*/
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 8px;
+    padding: 10px;
+    z-index: 10;
+    cursor:pointer;
+}
+
+.carousel-btn.left {
+    left: 0;
+}
+
+.carousel-btn.right {
+    right: 0;
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    stroke: black;
 }
 
 
