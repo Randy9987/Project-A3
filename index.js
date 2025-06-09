@@ -8,11 +8,11 @@ const searchClose = document.getElementById("search-close");
 
 searchToggle.addEventListener("click", (e) => {
   e.preventDefault();
-  searchBox.classList.toggle("hidden");
+  searchBox.classList.add("active");
 });
 
 searchClose.addEventListener("click", () => {
-  searchBox.classList.add("hidden");
+  searchBox.classList.remove("active");
 });
 
 const sidebar = document.getElementById("sidebar");
@@ -47,13 +47,15 @@ const track = document.querySelector(".carousel-track");
 const btnLeft = document.querySelector(".carousel-btn.left");
 const btnRight = document.querySelector(".carousel-btn.right");
 
-btnLeft.addEventListener("click", () => {
-  track.scrollBy({ left: -320, behavior: "smooth" });
-});
+if (track && btnleft && btnRight) {
+  btnLeft.addEventListener("click", () => {
+    track.scrollBy({ left: -320, behavior: "smooth" });
+  });
 
-btnRight.addEventListener("click", () => {
-  track.scrollBy({ left: 320, behavior: "smooth" });
-});
+  btnRight.addEventListener("click", () => {
+    track.scrollBy({ left: 320, behavior: "smooth" });
+  });
+}
 
 const heartButtons = document.querySelectorAll(".heart-btn");
 heartButtons.forEach((btn) => {
@@ -73,7 +75,7 @@ heartButtons.forEach((btn) => {
       : "Item successfully removed from Wishlist";
 
     if (popup._timeout) {
-      clearTimeout(pop._timeout);
+      clearTimeout(popup._timeout);
     }
 
     popup._timeout = setTimeout(() => {
