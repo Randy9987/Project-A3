@@ -678,7 +678,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-
+/*product page*/
 .product-details {
     text-align: left;
     padding: 16px;
@@ -744,6 +744,7 @@ body {
     justify-content: flex-start;
 }
 
+/* product page color swatch on each products*/ 
 .color-swatches {
     display: flex;
     gap: 8px;
@@ -766,4 +767,66 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* breadcrumb on product page */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 8px;
+    padding:12px 20px;
+    background-color: white;
+}
+
+.breadcrumb svg {
+    width: 14px;
+    height: 14px;
+    margin: 0 4px;
+    flex-shrink: 0;
+}
+
+.size-6 {
+    width: 16px;
+    height: 16px;
+}
+
+.breadcrumb-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 16px 20px;
+    background-color: white;
+    gap: 16px;
+}
+
+.breadcrumb-back {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.breadcrumb-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-arrow{
+    width: 14px;
+    height: 16px;
+    margin: 0 8px;
+    stroke: black;
+    flex-shrink: 0;
+}
+
+.breadcrumb-current {
+    color: black;
+    font-weight: 500;
 }
