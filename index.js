@@ -47,7 +47,7 @@ const track = document.querySelector(".carousel-track");
 const btnLeft = document.querySelector(".carousel-btn.left");
 const btnRight = document.querySelector(".carousel-btn.right");
 
-if (track && btnleft && btnRight) {
+if (track && btnLeft && btnRight) {
   btnLeft.addEventListener("click", () => {
     track.scrollBy({ left: -320, behavior: "smooth" });
   });
