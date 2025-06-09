@@ -773,10 +773,23 @@ body {
 .breadcrumb {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
     gap: 8px;
-    padding:12px 20px;
-    background-color: white;
+    padding: 0;
+    background-color: #f3f3f3;
+    white-space: nowrap;
+    scrollbar-width: none;
+    overflow-x: auto;
+}
+
+.section-header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.breadcrumb::-webkit-scrollbar {
+    display: none;
 }
 
 .breadcrumb svg {
@@ -786,18 +799,13 @@ body {
     flex-shrink: 0;
 }
 
-.size-6 {
-    width: 16px;
-    height: 16px;
-}
-
-.breadcrumb-container {
+.breadcrumb-bar {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 16px 20px;
+    align-items: center;
+    padding: 0px 20px;
     background-color: white;
     gap: 16px;
+    margin-bottom: 16px;
 }
 
 .breadcrumb-back {
@@ -829,4 +837,60 @@ body {
 .breadcrumb-current {
     color: black;
     font-weight: 500;
+}
+.size-6 {
+    width: 16px;
+    height: 16px;
+}
+
+.control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.control-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 20px 10px 20px;
+
+}
+
+.page-subtitle {
+    font-size: 18px;
+    color: #333;
+    margin: 0 20px 20px 20px;
+}
+
+.product-count {
+    font-size: 14px;
+    color: #333;
+}
+
+.sort-btn, .filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.sort-btn svg, .filter-btn svg {
+    width: 16px;
+    height: 16px;
 }
