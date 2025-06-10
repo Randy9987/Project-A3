@@ -57,6 +57,10 @@ if (track && btnLeft && btnRight) {
   });
 }
 
+document.querySelectorAll(".heart-btn, .icon-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => e.stopPropagation());
+});
+
 const heartButtons = document.querySelectorAll(".heart-btn");
 heartButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
