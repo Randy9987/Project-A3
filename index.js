@@ -87,3 +87,21 @@ heartButtons.forEach((btn) => {
     }, 2000);
   });
 });
+
+const unitPrice = 25; // your $ per metre
+function changeQty(delta) {
+  const input = document.getElementById("qty");
+  let qty = parseFloat(input.value) + delta;
+  qty = Math.max(0.1, Math.round(qty * 10) / 10); // floor at 0.1, one decimal
+  input.value = qty.toFixed(1);
+  document.querySelector(".total-price").textContent = `$${(
+    qty * unitPrice
+  ).toFixed(2)} AUD total price`;
+}
+
+document.querySelectorAll(".accordion-toggle").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement; // .accordion-item
+    item.classList.toggle("active");
+  });
+});
