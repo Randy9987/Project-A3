@@ -244,25 +244,49 @@
             </button>
           </div>
 
-          <!--shopping cart icon beside search button-->
-          <!--add link-->
-          <a href="#" class="nav-icon" aria-label="cart">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
+          <!--shopping cart -->
+          <div class="cart-container">
+            <a
+              href="#"
+              class="nav-icon cart-icon"
+              aria-label="Cart"
+              id="cartToggle"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-              />
-            </svg>
-          </a>
-          <!--Profile icon beside shopping cart icon-->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                />
+              </svg>
+              <span class="cart-count">0</span>
+            </a>
+            <!--cart dropdown when users hover ontop-->
+            <div class="cart-dropdown">
+              <div class="cart-header">
+                <h3>Your Basket</h3>
+                <span class="item-count">0 Item(s)</span>
+              </div>
+              <div class="cart-items">
+                <!-- added items/products-->
+              </div>
+              <div class="cart-footer">
+                <div class="cart-subtotal">
+                  <span>Subtotal (incl.GST)</span>
+                  <span class="subtotal-amount">$0.00</span>
+                </div>
+                <a href="basket.html" class="view-basket-btn">View Basket</a>
+                <p class="delivery-note">Delivery fee may apply</p>
+              </div>
+            </div>
+          </div>
+          <!--Profile iconn-->
           <!--add link-->
           <a href="#" class="nav-icon" aria-label="profile">
             <svg
@@ -390,7 +414,7 @@
             <button class="add-to-cart">Add to Cart</button>
 
             <!--express checkout button linked directly too the checkout page-->
-            <a href="/checkout.html" class="express-checkout">
+            <a href="checkout.html" class="express-checkout">
               Express Checkout
             </a>
             <button class="order-sample">Order a Sample | $2.00 AUD</button>
