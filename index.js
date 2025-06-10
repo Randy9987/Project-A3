@@ -25,9 +25,62 @@ const cart = {
     const cartItemsContainer = document.querySelector(".cart-items");
     cartItemsContainer.innerHTML = "";
 
-    thi.items.forEach((item) => {});
+    this.items.forEach((item) => {
+      const cartItem = document.createElement("div");
+      cartItem.className = "cart-item";
+      cartItem.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+          <div class="cart-item-details">
+            <div class="cart-item-title">${item.name}</div>
+            <div class="cart-item-variants">Color: ${item.color} Size: ${
+        item.size
+      }</div>
+            <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+          </div>
+        `;
+      cartItemsContainer.appendChild(cartItem);
+    });
   },
 };
+
+//update add to cart
+
+document.addEventListener("DOMContentLoaded", function () {
+  const addToCartBtn = document.querySelector(".add-to-cart");
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener("click", function () {
+      const qty = parseFloat(document.getElementById("qty").value);
+
+      const product = {
+        name:
+          document.querySelector(".product-title")?.textContent || "Unnamed",
+        price: qty * 25,
+        color:
+          document.querySelector(".swatch")?.style.backgroundColor || "N/A",
+        size: "150cm",
+        image: document.querySelector(".main-product-image")?.src || "",
+      };
+
+      cart.addItem(product);
+
+      const notification = document.createElement("div");
+      notification.className = "cart-notification";
+      notification.textContent = "Item added to cart!";
+      document.body.appendChild(notification);
+      setTimeout(() => notification.remove(), 2000);
+    });
+  }
+});
+
+// Add cart toggle functionality
+const cartToggle = document.getElementById("cartToggle");
+const cartDropdown = document.querySelector(".cart-dropdown");
+
+cartToggle.addEventListener("click", function (e) {
+  e.preventDefault();
+  cartDropdown.style.display =
+    cartDropdown.style.display === "block" ? "none" : "block";
+});
 
 //Search function
 
