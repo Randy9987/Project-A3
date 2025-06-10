@@ -1,5 +1,18 @@
 console.log("JS file connected");
 
+//shopping cart
+
+const cart = {
+  items: [],
+  count: 0,
+  subtotal: 0,
+
+  addItem: function (product) {
+    this.items.push(product);
+    this.updateCart();
+  },
+};
+
 //Search function
 
 const searchToggle = document.getElementById("search-toggle");
