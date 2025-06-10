@@ -88,20 +88,39 @@ heartButtons.forEach((btn) => {
   });
 });
 
-const unitPrice = 25; // your $ per metre
+const unitPrice = 25.0; //  25.00$ per metre
+
 function changeQty(delta) {
   const input = document.getElementById("qty");
   let qty = parseFloat(input.value) + delta;
-  qty = Math.max(0.1, Math.round(qty * 10) / 10); // floor at 0.1, one decimal
+  qty = Math.max(0.1, Math.round(qty * 10) / 10); // Min 0.1, 1 decimal place
   input.value = qty.toFixed(1);
-  document.querySelector(".total-price").textContent = `$${(
-    qty * unitPrice
-  ).toFixed(2)} AUD total price`;
+
+  // Update total price display
+  const totalPrice = qty * unitPrice;
+  document.querySelector(".total-price").textContent = `$${totalPrice.toFixed(
+    2
+  )} AUD total price`;
 }
 
 document.querySelectorAll(".accordion-toggle").forEach((btn) => {
   btn.addEventListener("click", () => {
     const item = btn.parentElement; // .accordion-item
     item.classList.toggle("active");
+  });
+});
+
+// product thumbnail
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mainImage = document.querySelector(".main-product-image");
+  const thumbnails = document.querySelectorAll(".product-thumbnail");
+
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", function () {
+      // Replace the src and alt of the main image with the clicked thumbnail's src and alt
+      mainImage.src = this.src;
+      mainImage.alt = this.alt;
+    });
   });
 });
