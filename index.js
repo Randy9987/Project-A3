@@ -11,6 +11,22 @@ const cart = {
     this.items.push(product);
     this.updateCart();
   },
+
+  updateCart: function () {
+    this.count = this.items.length;
+    this.subtotal = this.items.reduce((total, item) => total + item.price, 0);
+
+    document.querySelector(".cart-count").textContent = this.count;
+    document.querySelector(".item-count").textContent = `${this.count} ITEM(S)`;
+    document.querySelector(
+      ".subtotal-amount"
+    ).textContent = `$${this.subtotal.toFixed(2)}`;
+
+    const cartItemsContainer = document.querySelector(".cart-items");
+    cartItemsContainer.innerHTML = "";
+
+    thi.items.forEach((item) => {});
+  },
 };
 
 //Search function
