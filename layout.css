@@ -1435,12 +1435,51 @@ main {
   /*SHIPPING PAGE LAYOUT*/
 
   .shipping-page {
-    padding: 4rem 1.5rem;
+    padding: 64px 24px;
     max-width: 800px;
     margin: 0 auto;
     background-color: #fdfcf9;
     color: #111;
     font-family: 'Helvetica Neue', sans-serif;
   }
+
+.shipping-page h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom:16px;
+
+}
+
+.shipping-page h2 {
+    font-size:28px;
+    font-weight: 600;
+    margin-bottom:16px;
+}
+
+
+.shipping-page h3 {
+    font-size: 22px;
+    margin-top: 32px;
+    font-weight: bold;
+  }
   
-  .shipping 
+  .shipping-page h4 {
+    font-size: 18px;
+    margin-top: 16px;
+    font-weight: 600;
+  }
+  
+  .shipping-page ul {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .shipping-page p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  
+  .shipping-page a {
+    color: #000;
+    text-decoration: underline;
+  }
