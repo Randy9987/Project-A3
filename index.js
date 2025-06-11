@@ -76,11 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
 const cartToggle = document.getElementById("cartToggle");
 const cartDropdown = document.querySelector(".cart-dropdown");
 
-cartToggle.addEventListener("click", function (e) {
-  e.preventDefault();
-  cartDropdown.style.display =
-    cartDropdown.style.display === "block" ? "none" : "block";
-});
+if (cartToggle && cartDropdown) {
+  cartToggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    cartDropdown.style.display =
+      cartDropdown.style.display === "block" ? "none" : "block";
+  });
+}
 
 //Search function
 
@@ -125,7 +127,7 @@ document.querySelectorAll(".dropdown-toggle").forEach((button) => {
   });
 });
 
-const track = document.querySelector(".carousel-track");
+const track = document.querySelector(".carousel-container .carousel-track");
 const btnLeft = document.querySelector(".carousel-btn.left");
 const btnRight = document.querySelector(".carousel-btn.right");
 
