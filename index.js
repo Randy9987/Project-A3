@@ -231,3 +231,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const meterageInput = document.querySelector(".neterage-input");
+  const subtotalDisplay = document.getElementById("subtotal-amount");
+  const unitPrice = 25.0;
+
+  meterageInput.addEventListener("input", function () {
+    const qty = parseFloat(meterageInput.value) || 0;
+    const total = (unitPrice * qty).toFixed(2);
+    subtotalDisplay.textContent = `$${total}`;
+  });
+});

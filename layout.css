@@ -1565,3 +1565,90 @@ main {
     font-size: 12px;
     color:#ffffff
   }
+
+  .basket-page {
+    padding: 60px 40px;
+    background-color: #f8f6f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .basket-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .basket-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .basket-items {
+    flex: 2;
+  }
+  
+  .basket-item {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .basket-img {
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+  }
+  
+  .basket-details {
+    flex: 1;
+  }
+  
+  .item-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .item-price {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .meterage-input {
+    width: 60px;
+    padding: 5px;
+  }
+  
+  .order-summary {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .order-summary h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .checkout-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    background-color: #c6b86d;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
