@@ -46,29 +46,52 @@ const cart = {
 //update add to cart
 
 document.addEventListener("DOMContentLoaded", function () {
-  const addToCartBtn = document.querySelector(".add-to-cart");
-  if (addToCartBtn) {
-    addToCartBtn.addEventListener("click", function () {
-      const qty = parseFloat(document.getElementById("qty").value);
+  // 1. For product cards (e.g. homepage, listings) ==========
+  document.querySelectorAll(".add-from-card").forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const card = btn.closest(".product-card");
+      if (!card) return;
 
       const product = {
+        name: card.dataset.name || "Unnamed",
+        price: parseFloat(card.dataset.price) || 0,
+        color: card.dataset.color || "N/A",
+        size: card.dataset.size || "N/A",
+        image: card.dataset.image || "",
+      };
+
+      cart.addItem(product);
+      showCartNotification(product.name);
+    });
+  });
+
+  const detailBtn = document.querySelector(".add-to-cart");
+  if (detailBtn) {
+    detailBtn.addEventListener("click", function () {
+      const product = {
         name:
-          document.querySelector(".product-title")?.textContent || "Unnamed",
-        price: qty * 25,
-        color:
-          document.querySelector(".swatch")?.style.backgroundColor || "N/A",
-        size: "150cm",
+          document.querySelector(".product-tile")?.textContent.trim() ||
+          "Unnamed",
+        price: 25.0, // adjust if dynamic
+        color: "Selected", // optional: pull selected swatch if implemented
+        size: "150cm", // optional: dynamic if needed
         image: document.querySelector(".main-product-image")?.src || "",
       };
 
       cart.addItem(product);
-
-      const notification = document.createElement("div");
-      notification.className = "cart-notification";
-      notification.textContent = "Item added to cart!";
-      document.body.appendChild(notification);
-      setTimeout(() => notification.remove(), 2000);
+      showCartNotification(product.name);
     });
+  }
+
+  //notificaiton
+  function showCartNotification(name) {
+    const notification = document.createElement("div");
+    notification.className = "cart-notification";
+    notification.textContent = `${name} added to cart!`;
+    document.body.appendChild(notification);
+    setTimeout(() => notification.remove(), 2000);
   }
 });
 
