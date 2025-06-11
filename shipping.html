@@ -246,22 +246,47 @@
 
           <!--shopping cart icon beside search button-->
           <!--add link-->
-          <a href="#" class="nav-icon" aria-label="cart">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
+          <div class="cart-container">
+            <a
+              href="#"
+              class="nav-icon cart-icon"
+              aria-label="Cart"
+              id="cartToggle"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-              />
-            </svg>
-          </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                />
+              </svg>
+              <span class="cart-count">0</span>
+            </a>
+            <!--cart dropdown when users hover ontop-->
+            <div class="cart-dropdown">
+              <div class="cart-header">
+                <h3>Your Basket</h3>
+                <span class="item-count">0 Item(s)</span>
+              </div>
+              <div class="cart-items">
+                <!-- added items/products-->
+              </div>
+              <div class="cart-footer">
+                <div class="cart-subtotal">
+                  <span>Subtotal (incl.GST)</span>
+                  <span class="subtotal-amount">$0.00</span>
+                </div>
+                <a href="basket.html" class="view-basket-btn">View Basket</a>
+                <p class="delivery-note">Delivery fee may apply</p>
+              </div>
+            </div>
+          </div>
           <!--Profile icon beside shopping cart icon-->
           <!--add link-->
           <a href="#" class="nav-icon" aria-label="profile">
@@ -283,6 +308,131 @@
         </div>
       </nav>
     </header>
+    <main class="shipping-page">
+      <section class="shipping-content">
+        <h1>Shipping</h1>
+        <h2>Free shipping on orders over $300 AUD!*</h2>
+
+        <p>
+          <strong
+            ><a href="#"
+              >Is your order time sensitive? Let us know by leaving a note in
+              your cart!</a
+            ></strong
+          >
+        </p>
+
+        <p>
+          All fabric, supplies and sample orders placed through our Online
+          Store, are processed and dispatched from our New Zealand warehouse
+          which is separate to all of our physical
+          <a href="#">store locations</a>.
+        </p>
+
+        <p>
+          If you are near one of our stores in Australia, it may be quicker for
+          you to place a mail order directly with the store nearest you. You’ll
+          just need to check whether the store has the stock available that you
+          are wanting to purchase, and what the cost of local postage will be.
+          Pricing for mail orders from our stores varies depending on the size
+          of your order.
+        </p>
+
+        <p>
+          <strong
+            >We aim to cut and dispatch orders within 10 working days.</strong
+          >
+          If you have placed an order during a promotional period, this dispatch
+          timeframe may swell up to 14 days. Please refer to your order
+          confirmation email during sale time for a more accurate estimate.
+          Please note, once dispatched, the courier is responsible for delivery
+          and all deliveries are contactless unless otherwise requested.
+        </p>
+
+        <h3>Australia Online Shipping</h3>
+        <h4>Aus Post (Parcel Post) Standard:</h4>
+        <ul>
+          <li>Flat Rate: $15</li>
+          <li>Metro: 5–9 working days from dispatch</li>
+          <li>Rural: 5–12 working days from dispatch</li>
+          <li>Service: Tracked</li>
+        </ul>
+        <p>
+          If not at home, drivers may leave your parcel in a secure spot.
+          Otherwise, a card will be left. If a signature is required, leave a
+          note in your cart or email us after purchase. PO Boxes and Parcel
+          Lockers are supported.
+        </p>
+        <p>
+          NZ Post manages this service. Tracking will be via NZ Post. Parcels
+          originate from a NZ Post depot in NSW but are shipped from our
+          Auckland HQ.
+        </p>
+        <p><a href="#">Check NZ Post delivery updates</a></p>
+
+        <h4>DHL Express GoGreen+:</h4>
+        <ul>
+          <li>Flat Rate: $25</li>
+          <li>Metro: 2–3 working days from dispatch</li>
+          <li>Rural: 3–5 working days from dispatch</li>
+          <li>Service: Tracked</li>
+        </ul>
+        <p>
+          Authority to leave applies unless otherwise stated. No PO Box delivery
+          — use a physical address.
+        </p>
+        <p>
+          DHL shipments originate from NZ. $25 flat rate is subsidised. For
+          in-store options, contact your nearest TFS location.
+          <a href="#">See store details</a>
+        </p>
+        <p><a href="#">Check DHL delivery updates</a></p>
+
+        <h3>Samples – Free Untracked NZ Post:</h3>
+        <ul>
+          <li>Price: Free</li>
+          <li>Service: Untracked</li>
+        </ul>
+        <p>
+          Delivery in 10–30 working days. Delays may occur. If purchased with
+          fabric, samples ship together via tracked courier.
+        </p>
+
+        <h3>Duties & Customs</h3>
+        <p>
+          Australia import threshold: $1000 AUD. Orders above this may incur
+          duties/taxes payable by the customer. Contact us before placing large
+          orders if unsure.
+        </p>
+        <p>
+          Duties are based on goods + shipping cost, even if shipping is free.
+          Customs policies vary by country.
+        </p>
+
+        <h3>Courier Limitations</h3>
+        <ul>
+          <li>DHL does not deliver to PO boxes or parcel lockers</li>
+          <li>Australia Post does support PO boxes and parcel lockers</li>
+        </ul>
+
+        <h3>Customer Service</h3>
+        <p><strong>DHL:</strong> 13 14 06 (within Australia)</p>
+        <p>
+          <a
+            href="http://www.dhl.com.au/en/express/tracking.html"
+            target="_blank"
+            >DHL Tracking</a
+          >
+        </p>
+
+        <p><strong>Australia Post:</strong> +61 3 8847 9045</p>
+        <p>
+          <a href="https://auspost.com.au/mypost/track/search" target="_blank"
+            >AusPost Tracking</a
+          >
+        </p>
+      </section>
+    </main>
 
     <script src="index.js"></script>
   </body>
