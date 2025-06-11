@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Fabric Shop</title>
+    <link rel="stylesheet" href="layout.css" />
+  </head>
+  <body class="product-page-body">
+    <header class="nav-header">
+      <nav class="nav-container">
+        <!--Sidebar menu on the top left of the page-->
+        <!--sidebar wrapper-->
+        <div class="left">
+          <!--hamburger button to open the sidebar menu-->
+          <button class="hamburger" id="open-sidebar" aria-label="Sidebar-Menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="hamburger-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+          <!--overlay that appears behind the sidebar-->
+          <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+          <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+              <h2>The Fabric Store</h2>
+              <button id="close-sidebar" class="close-btn">
+                <svg
+                  class="close-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!--sidebar search function-->
+            <div class="sidebar-search">
+              <input type="text" placeholder="Search" />
+            </div>
+
+            <nav class="sidebar-menu">
+              <a href="index.html">Home</a>
+
+              <div class="dropdown">
+                <button class="dropdown-toggle">
+                  New Arrivals
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="dropdown-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">New Fabrics</a>
+                  <a href="#">Trending</a>
+                  <a href="#">Shop All</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropdown-toggle">
+                  Shop All Fabric
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="dropdown-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Cotton</a>
+                  <a href="#">Linen</a>
+                  <a href="#">Natural Fabric</a>
+                  <a href="#">Silk</a>
+                  <a href="#">Organic Fabric</a>
+                  <a href="#">Shop All</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropdown-toggle">
+                  Pattern + Supplies
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="dropdown-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Patterns</a>
+                  <a href="#">Tools</a>
+                  <a href="#">Shop All</a>
+                </div>
+              </div>
+
+              <a href="#">Sale</a>
+              <a href="#">Our Stores</a>
+              <a href="#">About Us</a>
+              <a href="#">Blog</a>
+            </nav>
+
+            <!--user actons-->
+            <div class="sidebar-actions">
+              <a href="#" class="user-action">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+                <span>Sign Up / Log in</span>
+              </a>
+              <a href="#" class="user-action">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+                <span>Wishlist</span>
+              </a>
+              <button class="loyalty-button">Online Loyalty</button>
+            </div>
+          </div>
+        </div>
+        <!--right side icons-->
+        <!--add link-->
+        <div class="right">
+          <a href="#" id="search-toggle" class="nav-icon" aria-label="Search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </a>
+
+          <!--Expandale Search Bar-->
+          <div id="search-box" class="search-box hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+            <input type="text" placeholder="Search" />
+            <button
+              id="search-close"
+              class="search-close"
+              aria-label="Close Search"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!--shopping cart icon beside search button-->
+          <!--add link-->
+          <a href="#" class="nav-icon" aria-label="cart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+              />
+            </svg>
+          </a>
+          <!--Profile icon beside shopping cart icon-->
+          <!--add link-->
+          <a href="#" class="nav-icon" aria-label="profile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="product-page">
+        <!--breadcrum section for page navigation-->
+        <section class="breadcrumb-section">
+          <div class="breadcrumb-bar">
+            <a href="#" class="breadcrumb-back">
+              <!-- < arrow  -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5 8.25 12l7.5-7.5"
+                />
+              </svg>
+              Back
+            </a>
+            <nav class="breadcrumb">
+              <a href="index.html" class="breadcrumb-link">Home </a>
+              <span class="breadcrumb-arrow">/</span>
+              <a href="shop-fabric.html" class="breadcrumb-link">
+                Shop Fabric
+              </a>
+              <span class="breadcrumb-arrow">/</span>
+              <span class="breadcrumb-current">Shop All</span>
+            </nav>
+          </div>
+        </section>
+
+        <!--page header section title and introducton-->
+        <section class="production-header">
+          <h1 class="page-title">Shop New Arrivals</h1>
+          <p class="page-subtitle">
+            Discover our latest fabric arrivals and refine your selection with filters! From vibrant Liberty prints to luxurious silks, cottons, linens, and merino blends — explore fresh seasonal picks, exclusive TFS milled colours, and newly sourced deadstock gems. There’s always something new for sewists of every style and skill level.
+          </p>
+        </section>
+
+        <!--Filter function buttons-->
+        <div class="control-row">
+          <span class="product-count">(12) products</span>
+          <div class="control-actions">
+            <button class="sort-btn" aria-label="Sort products">
+              Sort
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </button>
+            <button class="filter-btn">
+              Filter
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!--product grid section-->
+        <div class="product-grid static">
+        <!--first product-->
+        <div class="product-card">
+            <div class="product-image-container">
+                <!--image is clickable-->
+                <a href="product-soft-twill.html" >
+                    <img src="Product-Images/Product1.jpg" alt="Soft Cotton" />
+                </a>
+
+                <div class="product-icons">
+                    <button class="heart-btn" aria-label="Add to Wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                          </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Add to Cart">
+                        <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                      />
+                         </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="product-details">
+                <!--productname clickable-->
+                <a href="product-soft-twill.html" style="text-decoration: none; color: inherit;">
+                    <h3>Soft Twill Cotton</h3>
+                </a>
+                <p class="price">$25.00</p>
+    
+                <div class="color-swatches">
+                    <div
+                      class="swatch"
+                      style="background-color: #d46f4d"
+                      data-link="#"
+                    ></div>
+                    <div
+                      class="swatch"
+                      style="background-color: black"
+                      data-link="#"
+                    ></div>
+                    <div class="swatch more">+5</div>
+                </div>
+            </div>
+        </div>
+        
+        
+                
+          <!-- Second product-->
+          <div class="product-card">
+            <div class="product-image-container">
+                <a href="product-soft-twill.html" >
+                    <img src="Product-Images/Product2.jpg" alt="Soft Cotton" />
+                </a>
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+                <a href="product-soft-twill.html" style="text-decoration: none; color: inherit;">
+                    <h3>Olive Classic Cotton</h3>
+                </a>
+              <p class="price">$23.30</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- Third product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/Product3.jpg" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>Sunny Bloom Poplin</h3>
+              <p class="price">$25.50</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- Fourth product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/product4.webp" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>Ocean Stripe Voile/h3>
+              <p class="price">$27.00</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- Fifth product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/product5.webp" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>Bold Botanica Lawn</h3>
+              <p class="price">$33.30</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- Sixth product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/Product6.jpg" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>Blue Mosaic Cotton</h3>
+              <p class="price">$35.00</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- Seventh product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/product7.webp" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>Rust Luxe Crepe</h3>
+              <p class="price">$22.00</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- Eight product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/product8.jpg" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>Golden Weave Canvas</h3>
+              <p class="price">$33.50</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- nine product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/product9.jpg" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>Frost Dot Cotton</h3>
+              <p class="price">$29.00</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- Tenth product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/product10.jpeg" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>Crimson Twill Cotton</h3>
+              <p class="price">$38.00</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- eleventh product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/product11.webp" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>Plain Linen - Mocha Brown</h3>
+              <p class="price">$29.50</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+          <!-- Twelve product-->
+          <div class="product-card">
+            <div class="product-image-container">
+              <img src="Product-Images/product12.jpeg" alt="Soft Cotton" />
+              <div class="product-icons">
+                <!--add to wishlist-->
+                <button class="heart-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                    />
+                  </svg>
+                </button>
+                <!--add to shopping cart-->
+                <button class="icon-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-details">
+              <h3>vintage Floral Voile</h3>
+              <p class="price">30.00</p>
+              <div class="color-swatches">
+                <div
+                  class="swatch"
+                  style="background-color: #d46f4d"
+                  data-link="#"
+                ></div>
+                <div
+                  class="swatch"
+                  style="background-color: black"
+                  data-link="#"
+                ></div>
+                <div class="swatch more">+5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+    </main>
+
+    <!--corner buttons-->
+    <div class="corner-buttons">
+      <a href="#" class="corner-left-btn">Online Loyalty</a>
+      <a href="#" class="corner-right-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"
+          />
+        </svg>
+      </a>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
