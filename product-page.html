@@ -246,22 +246,47 @@
 
           <!--shopping cart icon beside search button-->
           <!--add link-->
-          <a href="#" class="nav-icon" aria-label="cart">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
+          <div class="cart-container">
+            <a
+              href="#"
+              class="nav-icon cart-icon"
+              aria-label="Cart"
+              id="cartToggle"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-              />
-            </svg>
-          </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                />
+              </svg>
+              <span class="cart-count">0</span>
+            </a>
+            <!--cart dropdown when users hover ontop-->
+            <div class="cart-dropdown">
+              <div class="cart-header">
+                <h3>Your Basket</h3>
+                <span class="item-count">0 Item(s)</span>
+              </div>
+              <div class="cart-items">
+                <!-- added items/products-->
+              </div>
+              <div class="cart-footer">
+                <div class="cart-subtotal">
+                  <span>Subtotal (incl.GST)</span>
+                  <span class="subtotal-amount">$0.00</span>
+                </div>
+                <a href="basket.html" class="view-basket-btn">View Basket</a>
+                <p class="delivery-note">Delivery fee may apply</p>
+              </div>
+            </div>
+          </div>
           <!--Profile icon beside shopping cart icon-->
           <!--add link-->
           <a href="#" class="nav-icon" aria-label="profile">
@@ -1108,6 +1133,47 @@
         </svg>
       </a>
     </div>
+    <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-column">
+            <h3 class="footer-heading">Sign up to enjoy 15% off your next full priced fabric order!</h3>
+            <form class="subscribe-form">
+              <input type="text" placeholder="Your first name" />
+              <input type="email" placeholder="Your email"/>
+              <button type="submit">Subcribe</button>
+            </form>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">The Fabric Store</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Our Stores</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Wholesale Enquiries</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-column">
+            <h4 class="footer-title">Customer Resources</h4>
+            <ul>
+              <li><a href="#">Wishlist</a></li>
+              <li><a href="#">Loyalty Club</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Fabric Care Guidelines</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Product Waitlist</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="footer-bottom">
+          <p>&copy; 2025 The Fabric Store. All rights reserved.</p>
+        </div>
+  
+      </footer>
     <script src="index.js"></script>
   </body>
 </html>
