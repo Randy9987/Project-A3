@@ -265,21 +265,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const accordionButtons = document.querySelectorAll(".accordion-toggle");
-
-  accordionButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const currentItem = btn.parentElement;
-
-      // Close all other items
-      document.querySelectorAll(".accordion-item").forEach((item) => {
-        if (item !== currentItem) {
-          item.classList.remove("active");
-        }
+  const items = document.querySelectorAll(".accordion-section .accordion-item");
+  items.forEach((item) => {
+    const toggle = item.querySelector(".accordion-toggle");
+    toggle.addEventListener("click", () => {
+      // Close any other open item
+      items.forEach((i) => {
+        if (i !== item) i.classList.remove("active");
       });
-
-      // Toggle current one
-      currentItem.classList.toggle("active");
+      // Toggle this one
+      item.classList.toggle("active");
     });
   });
 });

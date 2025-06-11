@@ -1131,10 +1131,7 @@ main {
 
 
   /* when open, rotate the plus into an “×” */
-.accordion-item.active .accordion-icon {
-    transform: rotate(45deg);
-  }
-  
+
   
 
   .product-detail-page {
@@ -1623,10 +1620,6 @@ main {
   
 
   
-  
-  .accordion-item.active .accordion-icon {
-    transform: rotate(180deg);
-  }
 
   
   input[type="email"],
@@ -1656,7 +1649,7 @@ main {
   }
   
   .submit-btn.disabled {
-    background-color: #888;
+    background-color: #000000;
     cursor: not-allowed;
   }
 
@@ -1699,21 +1692,93 @@ main {
     border-top: 1px solid #ccc;
     padding-top: 16px;
   }
+ 
   
-  /* ============================
-   Accordion Wrapper and Items
-   ============================ */
-.accordion-item {
-    border-bottom: 1px solid #ccc;
-    padding: 1rem 0;
+
+
+
+ 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+  
+.continue-btn-container {
+    margin-top: 24px;
+    text-align: left;
+}
+  
+/* Continue button styling */
+.continue-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c6b86d;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+  
+.continue-btn:hover {
+    background-color: #b3a45f;
+}
+
+/* checkout page arrow link back to shopping cart*/
+
+.return-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4d4420; /* match your theme */
+    text-decoration: none;
+    margin-bottom: 20px;
   }
   
-  /* ============================
-     Accordion Toggle Button
-     ============================ */
+  .return-link:hover {
+    text-decoration: underline;
+  }
+  
+  .arrow-left-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    stroke: currentColor;
+  }
+
+
+  /*shopping cartarrow link back to product gallery page*/
+
+  .continue-shopping-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4d4420; /* or any theme-matching color */
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  
+  .continue-shopping-link:hover {
+    text-decoration: underline;
+  }
+  
+  .arrow-left-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    stroke: currentColor;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
   .accordion-toggle {
     width: 100%;
-    padding: 1rem 0;
+    padding: 16px 0;
     background: none;
     border: none;
     font-size: 16px;
@@ -1724,41 +1789,34 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
   }
   
-  /* ============================
-     Accordion SVG Icon
-     ============================ */
   .accordion-icon {
-    width: 1em;
-    height: 1em;
+    width: 20px;
+    height: 20px;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
+    stroke-width: 2;
   }
   
-  /* Rotate icon when accordion is open */
-  .accordion-item.active .accordion-icon {
-    transform: rotate(45deg); /* change to 180deg if using chevrons */
-  }
-  
-  /* ============================
-     Accordion Content
-     ============================ */
   .accordion-content {
     display: none;
-    padding-top: 1rem;
-    font-size: 15px;
-    color: #444;
-    animation: fadeIn 0.3s ease-in-out;
+    padding: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
   
-  /* Show content when active */
   .accordion-item.active .accordion-content {
     display: block;
+    max-height: 800px; 
   }
   
-  /* Optional fade animation */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to   { opacity: 1; transform: translateY(0); }
+  .accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
   }
   
+
