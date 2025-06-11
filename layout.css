@@ -1431,3 +1431,16 @@ main {
     90% { opacity: 1; transform: translateY(0); }
     100% { opacity: 0; transform: translateY(-10px); }
   }
+
+  /*SHIPPING PAGE LAYOUT*/
+
+  .shipping-page {
+    padding: 4rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fdfcf9;
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .shipping 
