@@ -1,7 +1,6 @@
 console.log("JS file connected");
 
-//shopping cart
-
+//SHOPPING CART OBJECT
 const cart = {
   items: [],
   count: 0,
@@ -43,10 +42,9 @@ const cart = {
   },
 };
 
-//update add to cart
-
+//UPDATE TO CART FUNCTIONALLITY
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. For product cards (e.g. homepage, listings) ==========
+  // add to product card
   document.querySelectorAll(".add-from-card").forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
@@ -67,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  //Add from product detail page
   const detailBtn = document.querySelector(".add-to-cart");
   if (detailBtn) {
     detailBtn.addEventListener("click", function () {
@@ -74,9 +73,15 @@ document.addEventListener("DOMContentLoaded", function () {
         name:
           document.querySelector(".product-tile")?.textContent.trim() ||
           "Unnamed",
-        price: 25.0, // adjust if dynamic
-        color: "Selected", // optional: pull selected swatch if implemented
-        size: "150cm", // optional: dynamic if needed
+        price:
+          parseFloat(
+            document
+              .querySelector(".price")
+              ?.textContent.replace(/[^0-9.]/g, "")
+          ) || 25.0,
+
+        color: "Selected",
+        size: "150cm",
         image: document.querySelector(".main-product-image")?.src || "",
       };
 
@@ -85,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  //notificaiton
+  // NOTIFICATION POP UP
   function showCartNotification(name) {
     const notification = document.createElement("div");
     notification.className = "cart-notification";
@@ -95,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Add cart toggle functionality
+// CART DROPDOWN TOGGLE
 const cartToggle = document.getElementById("cartToggle");
 const cartDropdown = document.querySelector(".cart-dropdown");
 
@@ -107,8 +112,7 @@ if (cartToggle && cartDropdown) {
   });
 }
 
-//Search function
-
+// SEARCH FUNCTION
 const searchToggle = document.getElementById("search-toggle");
 const searchBox = document.getElementById("search-box");
 const searchClose = document.getElementById("search-close");
@@ -122,6 +126,7 @@ searchClose.addEventListener("click", () => {
   searchBox.classList.remove("active");
 });
 
+//SIDEBAR FUNCTION
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("sidebar-overlay");
 const openBtn = document.getElementById("open-sidebar");
@@ -142,7 +147,7 @@ const closeSidebar = () => {
 closeBtn.addEventListener("click", closeSidebar);
 overlay.addEventListener("click", closeSidebar);
 
-// Toggle dropdowns
+// SIDEBAR-DROPDOWN TOGGLE
 document.querySelectorAll(".dropdown-toggle").forEach((button) => {
   button.addEventListener("click", () => {
     const dropdown = button.closest(".dropdown");
@@ -150,6 +155,7 @@ document.querySelectorAll(".dropdown-toggle").forEach((button) => {
   });
 });
 
+//CAROUSEL CONTROLS
 const track = document.querySelector(".carousel-container .carousel-track");
 const btnLeft = document.querySelector(".carousel-btn.left");
 const btnRight = document.querySelector(".carousel-btn.right");
@@ -164,6 +170,7 @@ if (track && btnLeft && btnRight) {
   });
 }
 
+//WISHLIST-HEART.BTN
 document.querySelectorAll(".heart-btn, .icon-btn").forEach((btn) => {
   btn.addEventListener("click", (e) => e.stopPropagation());
 });
@@ -195,6 +202,8 @@ heartButtons.forEach((btn) => {
   });
 });
 
+//QUANTITY
+
 const unitPrice = 25.0; //  25.00$ per metre
 
 function changeQty(delta) {
@@ -210,15 +219,23 @@ function changeQty(delta) {
   )} AUD total price`;
 }
 
-document.querySelectorAll(".accordion-toggle").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const item = btn.parentElement; // .accordion-item
-    item.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".accordion-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const currentItem = btn.parentElement;
+
+      document.querySelectorAll(".accordion-item").forEach((item) => {
+        if (item !== currentItem) {
+          item.classList.remove("active");
+        }
+      });
+
+      currentItem.classList.toggle("active");
+    });
   });
 });
 
-// product thumbnail
-
+//IMAGE GALLERY SWITCH
 document.addEventListener("DOMContentLoaded", function () {
   const mainImage = document.querySelector(".main-product-image");
   const thumbnails = document.querySelectorAll(".product-thumbnail");
@@ -232,14 +249,37 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//METERAGE UPDATE
 document.addEventListener("DOMContentLoaded", function () {
-  const meterageInput = document.querySelector(".neterage-input");
+  const meterageInput = document.querySelector(".meterage-input");
   const subtotalDisplay = document.getElementById("subtotal-amount");
   const unitPrice = 25.0;
 
-  meterageInput.addEventListener("input", function () {
-    const qty = parseFloat(meterageInput.value) || 0;
-    const total = (unitPrice * qty).toFixed(2);
-    subtotalDisplay.textContent = `$${total}`;
+  if (meterageInput && subtotalDisplay) {
+    meterageInput.addEventListener("input", function () {
+      const qty = parseFloat(meterageInput.value) || 0;
+      const total = (unitPrice * qty).toFixed(2);
+      subtotalDisplay.textContent = `$${total}`;
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionButtons = document.querySelectorAll(".accordion-toggle");
+
+  accordionButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const currentItem = btn.parentElement;
+
+      // Close all other items
+      document.querySelectorAll(".accordion-item").forEach((item) => {
+        if (item !== currentItem) {
+          item.classList.remove("active");
+        }
+      });
+
+      // Toggle current one
+      currentItem.classList.toggle("active");
+    });
   });
 });

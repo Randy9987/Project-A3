@@ -309,7 +309,7 @@
       </nav>
     </header>
 
-    <main class="checkout-cointainer">
+    <main class="checkout-container">
       <div class="checkout-left">
         <div class="step-indicator">
           <span class="step active">Contact Info</span>
@@ -345,10 +345,55 @@
               <label><input type="checkbox" />Remember me</label>
               <a href="#">Forgot your password?</a>
             </div>
+            <button class="submit-btn">Go to Delivery</button>
+          </div>
+        </div>
+        <!--guest checkout accordion>-->
+        <div class="accordion-item">
+          <button class="accordion-toggle">
+            Continue as guest
+            <svg
+              class="accordion-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 9l6 6 6-6"
+              />
+            </svg>
+          </button>
+          <div class="accordion-content">
+            <label>Email*</label>
+            <input type="email" />
+            <button class="submit-btn disabled">Go to Delivery</button>
           </div>
         </div>
       </div>
+
+      <!--order summary-->
+      <aside class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="order-item">
+          <img src="Product-Images/Product1.jpg" alt="Soft Twill Cotton" />
+          <div class="order-item-info">
+            <strong>Soft Twill Cotton</strong><br />
+            150cm Light Blue<br />
+            Quantity: 1<br />
+            Price: $25.00
+          </div>
+        </div>
+        <div class="summary-total">
+          <span>Total (incl. GST)</span>
+          <strong>$25.00</strong>
+        </div>
+      </aside>
     </main>
+
     <footer class="site-footer">
       <div class="footer-top">
         <div class="footer-column">

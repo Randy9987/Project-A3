@@ -1120,10 +1120,14 @@ main {
   padding: 0 16px 16px;
   font-size: 14px;
   color: #444;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .accordion-item.active .accordion-content {
   display: block;
+
 }
 
 .accordion-content p {
@@ -1623,10 +1627,12 @@ main {
   
   .order-summary {
     flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    padding: 24px;
+    border-left: 1px solid #ddd;
   }
+
   
   .order-summary h2 {
     font-size: 22px;
@@ -1650,5 +1656,127 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .checkout-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .checkout-accordion {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .accordion-toggle {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .accordion-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 20px;
+    background: #f9f9f9;
+  }
+  
+  .accordion-item.active .accordion-content {
+    display: block;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .submit-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 14px 24px;
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .submit-btn.disabled {
+    background-color: #888;
+    cursor: not-allowed;
+  }
+
+  .order-summary {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+
+  .order-summary h2 {
+    margin-top: 0;
+    font-size: 22px;
+  }
+
+  .order-item {
+    display: flex;
+    gap: 16px;
+    margin: 20px ;
+  }
+
+  .order-item img {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  .order-item-info {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    padding-top: 16px;
   }
   
